@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import {
+  Link,
   Navigate,
   Route,
   Routes,
@@ -119,9 +120,9 @@ function Navbar() {
 
 function NavItem({ to, label, active }) {
   return (
-    <a className={active ? 'nav-item active' : 'nav-item'} href={to}>
+    <Link className={active ? 'nav-item active' : 'nav-item'} to={to}>
       {label}
-    </a>
+    </Link>
   )
 }
 
